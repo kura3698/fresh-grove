@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="robots" content="noindex">
+        <title>静的サイト用Gulpテンプレート</title>
+        <!-- OGP -->
+        <meta property="og:title" content="サイトタイトル" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hogehoge.com/" />
+        <meta property="og:description" content="サイトタイトル"><meta property="og:image" content="https://hogehoge.com/">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="628"><meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="サイトタイトル">
+        <meta name="twitter:description" content="サイトタイトル">
+        <!-- google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&family=Poppins:wght@600;700&display=swap"
+            rel="stylesheet"
+        />
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="/css/resset.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+
+        <!-- 構造化データ
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "サイト名",
+                "url": "https://www.example.com"
+            }
+        </script> -->
+
+        <!-- Google Analytics -->
+        <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+    </head>
+
+    <body>
+        <header class="l-header">
+            <div class="l-container">
+                <div class="l-header__inner">
+                    <h1 class="l-header__logo">
+                        <a href="#">
+                            <img src="./img/logo.webp" alt="サイトタイトル" />
+                        </a>
+                    </h1>
+                    <div class="c-drawer">
+                        <nav class="c-drawer__wrapper l-header__nav">
+                            <ul class="l-header__lists">
+                                <li class="l-header__list"><a href="#top">Top</a></li>
+                                <li class="l-header__list"><a href="#voice">ナビ１</a></li>
+                                <li class="l-header__list"><a href="#webiner">ナビ２</a></li>
+                                <li class="l-header__list"><a href="#register">ナビ３</a></li>
+                                <li class="l-header__list"><a href="#faq">ナビ4</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <button class="c-drawer__btn">
+                        <span class="c-drawer__bars">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- メインビジュアルここから -->
+            <div id="top" class="p-fv">
+                <div class="p-fv__container">
+                    <div class="l-container">
+                        <div class="l-container-large">
+                            <div class="p-fv__inner flex">
+                                <div class="p-fv__contents flex">
+                                    <p class="p-fv__copy">Gulp<br/>静的サイト用テンプレート</p>
+                                </div>
+                            </div>
+                            <img src="./img/sample-man.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- セクション１ -->
+             <section class="p-section-1">
+
+             </section>
+             <section class="p-section-2">
+
+             </section>
+             <section class="p-section-3">
+
+             </section>
+             <section class="p-section-4">
+
+             </section>
+        </main>
+
+        <footer class="l-footer">
+            <div class="l-container">
+                <div class="l-container-large">
+                    <div class="l-footer__inner flex">
+                        <div class="l-footer__info">
+                            <div class="l-footer__wrap flex">
+                                <p class="l-footer__company">
+                                    <span>Presented by</span>
+                                        マサタカ
+                                </p>
+                                <div class="l-footer__social flex">
+                                    <a href="https://x.com/imstkay1123fn" target="_blank" class="l-footer__social-link"><img src="./img/icon-x.svg" alt="x"></a>
+                                    <a href="#" target="_blank" class="l-footer__social-link"><img src="./img/icon-line.svg" alt="Facebook"></a>
+                                    <a href="#" target="_blank" class="l-footer__social-link"><img src="./img/icon-instagram.svg" alt="Instagram"></a>
+                                </div>
+                            </div>
+                            <dl class="l-footer__access flex">
+                                <div class="flex">
+                                    <dt>所在地</dt>
+                                    <dd>札幌市</dd>
+                                </div>
+                                <div class="flex">
+                                    <dt>資本金</dt>
+                                    <dd>
+                                        たくさんほしい
+                                    </dd>
+                                </div>
+                                <div class="flex">
+                                    <dt>代表者名</dt>
+                                    <dd>
+                                        HelixCode代表　マサタカ
+                                    </dd>
+                                </div>
+                            </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l-footer__bottom">
+                        <p>&copy;2025 HelixCode</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="/js/script.js"></script>
+    </body>
+</html>

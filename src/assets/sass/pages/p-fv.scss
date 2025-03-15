@@ -1,0 +1,67 @@
+@use '../config/' as *;
+.p-fv {
+    overflow: hidden;
+    position: relative;
+}
+
+.p-fv__inner {
+    width: 100%;
+    position: relative;
+    padding-top: 300px;
+    flex-direction: column;
+    @include mq('md') {
+        padding-top: 150px;
+        flex-direction: row-reverse;
+    }
+}
+.p-fv__contents{
+    flex-direction: column;
+}
+
+.p-fv__copy {
+    color: var(--text-main);
+    font-family: var(--font-jp);
+    font-weight: var(--bold);
+    font-size: 60px;
+    font-style: normal;
+    line-height: 0.99;
+}
+.p-fv__labels {
+    font-size:24px;
+    font-weight: var(--bold);
+    letter-spacing: 2.24px;
+    line-height: normal;
+    color: var(--color-primary);
+    text-align: center;
+    margin-inline: auto;
+    @include mq('md'){
+        margin-inline: unset;
+        text-align: left;
+    }
+
+}
+.p-fv__label {
+    margin-top: 24px;
+}
+
+.p-fv__label.--large{
+    font-size: 28px;
+    letter-spacing: 2.24px;
+}
+.p-fv__btns {
+    text-align: center;
+    margin-inline: auto;
+    width: 100%;
+}
+.p-fv__btn {
+    width: 100%;
+    margin-top: 16px;
+    width: 339px;
+}
+
+.p-fv__slash {
+    margin-top: 64px;
+}
+
+
+

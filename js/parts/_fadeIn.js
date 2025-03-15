@@ -1,0 +1,1 @@
+gsap.registerPlugin(ScrollTrigger);let timeDelay=250,maxItemNumber=3;for(let t=0;t<maxItemNumber;t++){let e=document.querySelectorAll(".c-animated__fadeIn.--delay"+t);fadeInFunction(e,t*timeDelay)}function fadeInFunction(e,t){e.forEach(e=>{ScrollTrigger.create({trigger:e,start:"top 70%",markers:!0,onEnter:()=>{setTimeout(()=>{e.classList.add("js-show")},t)}})})}

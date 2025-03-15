@@ -1,0 +1,91 @@
+@use '../config/' as *;
+
+.l-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding-top:20px;
+    @include mq('lg') {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+}
+
+.l-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--container);
+    height: 52.5px;
+    margin: 0 auto;
+    @include mq('lg') {
+        height: 74px;
+    }
+}
+
+.l-header__logo {
+    width: 178px;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+    opacity: 1;
+    visibility: visible;
+    @include mq('md') {
+        width: 248px;
+    }
+}
+.l-header__nav {
+    display: flex;
+    background-color: var(--color-base);
+    padding: 32px 332px 48px 44px;
+    border-radius: 48px;
+    gap: 32px;
+    @media screen and (min-width:1280px) {
+        display: flex;
+        padding: 10px 16px 10px 32px;
+    }
+}
+.l-header__lists {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    @media screen and (min-width:1280px) {
+        gap: 32px;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+.l-header__btns {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 220px;
+    @media screen and (min-width:1280px) {
+        gap: 16px;
+        flex-direction: row;
+        width: auto;
+    }
+}
+.l-header__btns .c-btn {
+    width: 100%;
+    @media screen and (min-width:1280px) {
+        width: auto;
+    }
+}
+.l-header__list a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 15px;
+    line-height: normal;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    &:hover {
+        font-weight: var(--bold);
+        color: var(--color-primary);
+    }
+}

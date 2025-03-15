@@ -1,0 +1,122 @@
+@use '../config/' as *;
+
+.c-drawer{
+    position: fixed;
+    top: 20px;
+    right: -100%;
+    width: 100vw;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+    &:after {
+        content: '';
+        position: absolute;
+        top: -20px;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(77, 70, 64, 0.848);
+        z-index: -1;
+        @media screen and (min-width:1280px){
+            display: none;
+        }
+    }
+    @media screen and (min-width:1280px) {
+        position: static;
+        width: auto;
+        height: auto;
+        box-shadow: unset;
+        border-radius: 48px;
+        flex-direction: row;
+        display: flex;
+    }
+    
+    &.is-open {
+        right: 0;
+    }
+
+}
+.c-drawer__wrapper {
+    position: relative;
+    z-index: 999;
+    margin-left: auto;
+    width: calcValue(306px,375px);
+    max-width: 500px;
+    height: 486px;
+    border-radius: 64px 0px 0px 64px;
+    background: var(--color-base);
+    flex-direction: column;
+    box-shadow: 0px 4px 15px 0px rgba(81, 77, 79, 0.15);
+    @media screen and (min-width:1280px) {
+        position: static;
+        width: auto;
+        height: auto;
+        box-shadow: unset;
+        border-radius: 48px;
+        flex-direction: row;
+        display: flex;
+        width: 100%;
+        max-width: none;
+    }
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 32px;
+        right: 32px;
+        width: 29px;
+        height: 29px;
+        @media screen and (min-width:1280px){
+            display: none;
+        }
+    }
+}
+.c-drawer__inner {
+    padding: 20px;
+}
+.c-drawer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.c-drawer__lists {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.c-drawer__lists a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.c-drawer__btn {
+    cursor: pointer;
+    right: -40px;
+    position: relative;
+    right: -40px;
+    flex-direction: column;
+    border-radius: 48px 0px 0px 48px;
+    display: flex;
+    padding:18px 12px 18px 18px;
+    flex-direction: column;
+    align-items: center;
+    width: 52px;
+    height:52.5px;
+    background-color: var(--color-base);
+    transition: background-color 0.3s;
+    @media screen and (min-width:1280px) {
+        display: none;
+    }
+}
+.c-drawer__btn span {
+    display: block;
+    width: 22px;
+    height: 3px;
+    background-color:brown;
+    transition: background-color 0.3s;
+    &:nth-child(2) {
+        margin: 5px 0;
+    }
+}

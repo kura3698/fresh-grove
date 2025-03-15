@@ -1,0 +1,1 @@
+function loadedPage(){document.getElementById("js-loading").classList.add("js-loaded")}document.addEventListener("DOMContentLoaded",()=>{sessionStorage.getItem("visited")?setTimeout(loadedPage,0):(sessionStorage.setItem("visited","first"),setTimeout(loadedPage,4e3))});
