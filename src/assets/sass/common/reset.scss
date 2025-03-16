@@ -43,11 +43,15 @@ figure {
 
 html {
   line-height: 1;
+  //追加
+  -webkit-text-size-adjust: 100%; /* Safariではまだベンダープレフィックスが必要 */
+  text-size-adjust: 100%;
 }
 
 ol,
 ul {
-  list-style: none;
+  // list-style: none;
+  list-style-type: "";
 }
 
 li,
@@ -71,4 +75,3 @@ img {
   border: none;
   vertical-align: bottom;
 }
-

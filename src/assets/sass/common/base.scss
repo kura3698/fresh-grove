@@ -64,3 +64,44 @@ select {
     // text-decoration: none;
   }
 }
+
+//　追加
+
+:where(button, [type='button'], [type='reset'], [type='submit']) {
+  touch-action: manipulation;
+}
+
+:where(
+    :any-link,
+    button,
+    [type='button'],
+    [type='reset'],
+    [type='submit'],
+    label[for],
+    select,
+    summary,
+    [role='tab'],
+    [role='button']
+  ) {
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after,
+  ::backdrop {
+    background-attachment: scroll !important;
+    transition-delay: 0s !important;
+    transition-duration: 1ms !important;
+    animation-duration: 1ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// [id],
+// :focus {
+//   scroll-margin-block-start: var(--scroll-margin);
+// }
