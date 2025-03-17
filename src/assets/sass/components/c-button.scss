@@ -20,4 +20,16 @@
       background: $hover-primary;
     }
   }
+  &.c-button--arrow {
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    padding-inline: rm(36);
+    width: fit-content;
+    gap: rm(24);
+    svg {
+      height: 19px;
+      width: 9px;
+    }
+  }
 }

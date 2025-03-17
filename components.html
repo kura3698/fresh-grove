@@ -57,11 +57,31 @@
     </style>
   </head>
   <body>
+    <svg style="display: none">
+      <defs>
+        <symbol viewBox="0 0 14 23" id="arrow">
+          <path
+            d="M2 21L11 11.5L2 2"
+            stroke="currentColor"
+            stroke-width="3"
+            stroke-linecap="round"
+            fill="none"
+          />
+        </symbol>
+      </defs>
+    </svg>
     <div class="l-inner">
       <a href="#contact" class="c-button">問い合わせをする</a>
       <hr />
-
-      <a href="" class="c-button-">問い合わせをする</a>
+      <a href="" class="c-button c-button--arrow"
+        ><span>さらに詳しく見る</span
+        ><svg class=""><use href="#arrow"></use></svg>
+      </a>
+      <hr />
+      <a href="" class="c-button c-button--cta"
+        ><span>さらに詳しく見る</span
+        ><svg class=""><use href="#arrow"></use></svg>
+      </a>
       <hr />
     </div>
   </body>
