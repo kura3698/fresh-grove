@@ -1,4 +1,4 @@
-@use "../global" as *;
+@use "../config/" as *;
 
 .l-inner {
   position: relative;
@@ -8,7 +8,7 @@
   padding: 0 rm($pc-sidePadding);
   margin-inline: auto;
 
-  @include mq(sp) {
+  @include mq(sm) {
     width: 100%;
     max-width: px($sp-inner-sum);
     padding: 0 rm($sp-sidePadding);
@@ -17,7 +17,7 @@
 
 .l-inner__narrow {
   max-width: rm($pc-narrow-inner);
-  @include mq(sp) {
+  @include mq(sm) {
     padding: 0 rm($sp-sidePadding);
     max-width: px($sp-inner);
   }
