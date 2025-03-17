@@ -23,24 +23,4 @@
       background: $hover-primary;
     }
   }
-
-  &.c-button--cta {
-    display: flex;
-    align-items: center;
-    gap: rm(24);
-    width: fit-content;
-    margin-inline: auto;
-
-    svg {
-      width: 23.431px;
-      height: 32.635px;
-    }
-  }
-}
-
-.c-button__strong {
-  font-size: 33px;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: 1.65px;
 }
