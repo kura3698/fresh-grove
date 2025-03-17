@@ -1,0 +1,38 @@
+@use "../config/" as *;
+
+.c-button-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rm(24);
+  width: rm(240);
+  height: rm(56);
+  text-align: center;
+  margin-inline: auto;
+
+  font-size: rm(16);
+  font-weight: 700;
+  line-height: rm(56);
+  letter-spacing: 0.8px;
+  color: $text-secondary;
+
+  border: 1px solid;
+  border-radius: 8px;
+  background: #fff;
+  transition: background 0.3s ease-in-out;
+
+  svg {
+    height: 19px;
+    width: 9px;
+  }
+
+  &:focus-visible {
+    background: $hover-primary;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $hover-primary;
+    }
+  }
+}

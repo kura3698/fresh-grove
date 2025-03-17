@@ -4,10 +4,12 @@
   color: $text-secondary;
   font-size: rm(16);
   font-weight: 700;
-  line-height: 56px;
+  line-height: rm(56);
+  height: rm(56);
   letter-spacing: 0.8px;
-  border-radius: 8px;
+
   border: 1px solid;
+  border-radius: 8px;
   background: #fff;
   padding-inline: 2em;
   transition: background 0.3s ease-in-out;
@@ -15,21 +17,30 @@
   &:focus-visible {
     background: $hover-primary;
   }
+
   @media (any-hover: hover) {
     &:hover {
       background: $hover-primary;
     }
   }
-  &.c-button--arrow {
-    margin-inline: auto;
+
+  &.c-button--cta {
     display: flex;
     align-items: center;
-    padding-inline: rm(36);
-    width: fit-content;
     gap: rm(24);
+    width: fit-content;
+    margin-inline: auto;
+
     svg {
-      height: 19px;
-      width: 9px;
+      width: 23.431px;
+      height: 32.635px;
     }
   }
+}
+
+.c-button__strong {
+  font-size: 33px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 1.65px;
 }
