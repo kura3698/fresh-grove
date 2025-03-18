@@ -1,0 +1,14 @@
+@use "../config/" as *;
+
+.c-head {
+  font-size: rm(22);
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: rm(1.1);
+
+  @include mq("md") {
+    font-size: rm(32);
+    letter-spacing: rm(1.6);
+  }
+}
