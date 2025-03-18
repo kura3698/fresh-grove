@@ -1,0 +1,60 @@
+@use "../config/" as *;
+
+.c-button-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rm(18.8);
+  width: rm(335);
+  height: rm(62);
+  margin-inline: auto;
+
+  font-size: rm(20);
+  font-weight: 700;
+  line-height: rm(62);
+  letter-spacing: 1px;
+  color: $text-secondary;
+
+  border: 1px solid;
+  border-radius: 8px;
+  background: #fff;
+  transition: background 0.3s ease-in-out;
+
+  svg {
+    width: rm(23.431);
+    height: rm(32.635);
+  }
+  .--strong {
+    font-size: rm(33);
+    letter-spacing: 1.65px;
+    vertical-align: bottom;
+  }
+
+  &:focus-visible {
+    background: $hover-primary;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $hover-primary;
+    }
+  }
+
+  @include mq("md") {
+    width: rm(400);
+    gap: rm(22);
+    font-size: rm(24);
+    letter-spacing: 1.2px;
+    height: rm(75);
+
+    line-height: rm(75);
+    svg {
+      width: rm(28);
+      height: rm(39);
+    }
+    .--strong {
+      font-size: rm(40);
+      letter-spacing: 2px;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+@use "../config/" as *;
+
+.c-campaign-fv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: auto;
+  color: $text-secondary;
+}
+
+.c-campaign-fv__day {
+  font-size: rm(20);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 1px;
+
+  .--number {
+    font-family: $ff-en;
+    font-size: rm(24);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: rm(1.2);
+  }
+
+  .--small {
+    font-size: rm(16);
+    letter-spacing: rm(0.8);
+  }
+
+  &::before {
+    content: "\\";
+    margin-inline-end: rm(10);
+    font-weight: 400;
+  }
+
+  &::after {
+    content: "/";
+    margin-inline-start: rm(10);
+    font-weight: 400;
+  }
+}
+
+.c-campaign-fv__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: rm(284);
+  height: rm(135);
+  font-size: rm(16);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: rm(0.8);
+  border-radius: 8px;
+  background: $color-other5;
+  margin-block-start: rm(5);
+}
+
+.c-campaign-fv__attention {
+  display: flex;
+  align-items: center;
+  height: rm(53);
+  padding-block: rm(5);
+  padding-inline: rm(18);
+  margin-block-start: rm(13);
+  border-radius: 42.889px;
+  background: #fff;
+  line-height: 1.3;
+
+  .--strong {
+    font-size: rm(32);
+    line-height: rm(39);
+    letter-spacing: rm(3.2);
+    margin-inline-start: rm(5);
+  }
+
+  svg {
+    width: rm(20);
+    height: rm(26.646);
+    vertical-align: middle;
+    margin-inline-start: rm(-5);
+  }
+}
+
+.c-campaign-fv__description {
+  color: #fff;
+  margin-block-start: rm(8);
+
+  svg {
+    width: rm(9);
+    height: rm(27);
+    vertical-align: bottom;
+  }
+
+  .--strong {
+    font-size: rm(20);
+    letter-spacing: rm(2);
+  }
+}

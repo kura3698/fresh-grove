@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="robots" content="noindex" />
+    <title>静的サイト用Gulpテンプレート</title>
+    <!-- OGP -->
+    <meta property="og:title" content="サイトタイトル" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hogehoge.com/" />
+    <meta property="og:description" content="サイトタイトル" />
+    <meta property="og:image" content="https://hogehoge.com/" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="628" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="サイトタイトル" />
+    <meta name="twitter:description" content="サイトタイトル" />
+    <!-- google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- 構造化データ
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "サイト名",
+                "url": "https://www.example.com"
+            }
+        </script> -->
+
+    <!-- Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+    <style>
+      body {
+        padding-top: 20px;
+        text-align: center;
+      }
+      hr {
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <svg style="display: none">
+      <defs>
+        <symbol viewBox="0 0 14 23" id="arrow">
+          <path
+            d="M2 21L11 11.5L2 2"
+            stroke="currentColor"
+            stroke-width="3"
+            stroke-linecap="round"
+            fill="none"
+          />
+        </symbol>
+        <symbol viewBox="0 0 36 48" id="pdf-icon">
+          <path
+            d="M31.58 10.6659L21.78 0.915904C21.5 0.637333 21.22 0.498047 20.8 0.498047H6.8C5.26 0.498047 4 1.75162 4 3.28376V36.7123C4 38.2445 5.26 39.498 6.8 39.498H29.2C30.74 39.498 32 38.2445 32 36.7123V11.6409C32 11.223 31.86 10.9445 31.58 10.6659ZM20.8 3.8409L28.64 11.6409H20.8V3.8409ZM29.2 36.7123H6.8V3.28376H18V11.6409C18 13.173 19.26 14.4266 20.8 14.4266H29.2V36.7123Z"
+            fill="currentColor"
+          />
+          <path
+            d="M21.1526 3.48645L20.3 2.63815V3.8409V11.6409V12.1409H20.8H28.64H29.8515L28.9926 11.2864L21.1526 3.48645ZM29.2 37.2123H29.7V36.7123V14.4266V13.9266H29.2H20.8C19.5337 13.9266 18.5 12.8945 18.5 11.6409V3.28376V2.78376H18H6.8H6.3V3.28376V36.7123V37.2123H6.8H29.2ZM21.4274 1.27036L31.2274 11.0204C31.3378 11.1302 31.4005 11.2201 31.4385 11.3051C31.4754 11.3878 31.5 11.4906 31.5 11.6409V36.7123C31.5 37.9659 30.4663 38.998 29.2 38.998H6.8C5.53373 38.998 4.5 37.9659 4.5 36.7123V3.28376C4.5 2.03017 5.53373 0.998047 6.8 0.998047H20.8C20.952 0.998047 21.0563 1.02267 21.1403 1.0598C21.2264 1.09786 21.317 1.16055 21.4274 1.27036Z"
+            fill="currentColor"
+          />
+          <path
+            d="M21.1526 3.48645L20.3 2.63815V3.8409V11.6409V12.1409H20.8H28.64H29.8515L28.9926 11.2864L21.1526 3.48645ZM29.2 37.2123H29.7V36.7123V14.4266V13.9266H29.2H20.8C19.5337 13.9266 18.5 12.8945 18.5 11.6409V3.28376V2.78376H18H6.8H6.3V3.28376V36.7123V37.2123H6.8H29.2ZM21.4274 1.27036L31.2274 11.0204C31.3378 11.1302 31.4005 11.2201 31.4385 11.3051C31.4754 11.3878 31.5 11.4906 31.5 11.6409V36.7123C31.5 37.9659 30.4663 38.998 29.2 38.998H6.8C5.53373 38.998 4.5 37.9659 4.5 36.7123V3.28376C4.5 2.03017 5.53373 0.998047 6.8 0.998047H20.8C20.952 0.998047 21.0563 1.02267 21.1403 1.0598C21.2264 1.09786 21.317 1.16055 21.4274 1.27036Z"
+            fill="currentColor"
+          />
+          <path
+            d="M10.5 28.998H25.5V30.998H10.5V28.998ZM10.5 19.998H25.5V21.998H10.5V19.998Z"
+            fill="currentColor"
+          />
+          <path
+            d="M10.5 28.998H25.5V30.998H10.5V28.998ZM10.5 19.998H25.5V21.998H10.5V19.998Z"
+            fill="currentColor"
+          />
+          <path
+            d="M10.5 28.998H25.5V30.998H10.5V28.998ZM10.5 19.998H25.5V21.998H10.5V19.998Z"
+            fill="currentColor"
+          />
+        </symbol>
+        <symbol viewBox="0 0 64 8" id="head-icon">
+          <circle cx="4" cy="4" r="4" fill="#E10048" />
+          <circle cx="18" cy="4" r="4" fill="#105F00" />
+          <circle cx="32" cy="4" r="4" fill="#99B901" />
+          <circle cx="46" cy="4" r="4" fill="#FDD401" />
+          <circle cx="60" cy="4" r="4" fill="#FFA426" />
+        </symbol>
+      </defs>
+    </svg>
+    <div class="l-inner">
+      <a href="" class="c-button">問い合わせをする</a>
+      <hr />
+      <a href="" class="c-button-arrow"
+        ><span>さらに詳しく見る</span
+        ><svg class=""><use href="#arrow"></use></svg>
+      </a>
+      <hr />
+      <a href="" class="c-button-cta">
+        <svg class=""><use href="#pdf-icon"></use></svg>
+        <p>
+          <span class="--strong">無料</span>
+          <span>で資料を請求する</span>
+        </p>
+      </a>
+      <hr />
+      <a href="" class="c-button-submit"><span>問い合わせをする</span></a>
+      <hr />
+      <a href="" class="c-button-bannar">
+        <p>最短<span class="u-bold">1</span>分で完了！</p>
+        <p>
+          <span class="--strong">無料</span>
+          <span>で資料を請求する</span>
+        </p>
+      </a>
+      <hr />
+      <div class="c-campaign-fv">
+        <p class="c-campaign-fv__day">
+          <span class="--number">10</span><span class="--small">月</span
+          ><span class="--number">31</span><span class="--small">日</span>まで !
+        </p>
+        <div class="c-campaign-fv__container">
+          <div class="c-campaign-fv__attention">
+            <p class="">当社と保守契約を<br />されているお客様</p>
+            <p class="--strong">
+              限定<svg class=""><use href="#!"></use></svg>
+            </p>
+          </div>
+          <div class="c-campaign-fv__description">
+            <p>
+              <svg class=""><use href="#1"></use></svg>
+              <span class="--small">年間</span
+              ><span class="--strong">無制限</span
+              ><span class="--small">で</span
+              ><span class="--strong">使い放題</span>
+            </p>
+            <p>キャンペーン実施中 !</p>
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <div class="c-campaign-price">
+        <p class="c-campaign-price__day">
+          <span class="--number">10</span><span class="--small">月</span
+          ><span class="--number">31</span><span class="--small">日</span>まで !
+        </p>
+        <div class="c-campaign-price__container">
+          <div class="c-campaign-price__attention">
+            <div class="c-campaign-price__plan"></div>
+            <p class="">をお申し込みの方</p>
+            <p class="--strong">
+              限定<svg class=""><use href="#!"></use></svg>
+            </p>
+          </div>
+          <div class="c-campaign-price__description">
+            <p>
+              <span class="u-sm-hidden--inline --small">今なら</span>
+              <svg class=""><use href="#1"></use></svg>
+              <span class="--small">年間</span
+              ><span class="--strong">無制限</span
+              ><span class="--small">で</span
+              ><span class="--strong">使い放題</span>
+            </p>
+            <p>キャンペーン実施中 !</p>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <hgroup class="c-head-section">
+        <h2>特徴</h2>
+        <svg class=""><use href="#head-icon"></use></svg>
+        <p>Features</p>
+      </hgroup>
+      <hr />
+      <h3 class="c-head">
+        現場の<span class="u-highlight">AI活用</span>について、<span
+          class="u-inline-block"
+          >こんなお悩みはありませんか？</span
+        >
+      </h3>
+      <hr />
+    </div>
+  </body>
+</html>

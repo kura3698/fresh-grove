@@ -1,0 +1,49 @@
+@use "../config/" as *;
+
+.c-button-submit {
+  width: rm(200);
+  height: rm(56);
+  position: relative;
+
+  color: #fff;
+  font-size: rm(16);
+  font-weight: 700;
+  line-height: rm(56);
+  letter-spacing: 0.8px;
+
+  border: 1px solid;
+  border-radius: 8px;
+  // hover後のカラー
+  background: $hover-primary;
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    // hover前のカラー
+    background: linear-gradient(264deg, #99b901 -3.85%, #105f00 74.17%);
+    border-radius: 8px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &:focus-visible {
+    &::after {
+      opacity: 0;
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+}
